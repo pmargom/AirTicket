@@ -212,6 +212,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607011655264_InitialModel.cs" />
+    <Compile Include="Migrations\201607011655264_InitialModel.Designer.cs">
+      <DependentUpon>201607011655264_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607011656392_AddPublicUser.cs" />
+    <Compile Include="Migrations\201607011656392_AddPublicUser.Designer.cs">
+      <DependentUpon>201607011656392_AddPublicUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607011658506_AddNotification.cs" />
+    <Compile Include="Migrations\201607011658506_AddNotification.Designer.cs">
+      <DependentUpon>201607011658506_AddNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607011709019_AddAirport.cs" />
+    <Compile Include="Migrations\201607011709019_AddAirport.Designer.cs">
+      <DependentUpon>201607011709019_AddAirport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607011710046_PopulateAirports.cs" />
+    <Compile Include="Migrations\201607011710046_PopulateAirports.Designer.cs">
+      <DependentUpon>201607011710046_PopulateAirports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AirCraft.cs" />
     <Compile Include="Models\Airline.cs" />
@@ -308,6 +329,23 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607011655264_InitialModel.resx">
+      <DependentUpon>201607011655264_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607011656392_AddPublicUser.resx">
+      <DependentUpon>201607011656392_AddPublicUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607011658506_AddNotification.resx">
+      <DependentUpon>201607011658506_AddNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607011709019_AddAirport.resx">
+      <DependentUpon>201607011709019_AddAirport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607011710046_PopulateAirports.resx">
+      <DependentUpon>201607011710046_PopulateAirports.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -20,6 +20,10 @@ namespace AirticketApp.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<PublicUser> PublicUsers { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Airport> Airports { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
