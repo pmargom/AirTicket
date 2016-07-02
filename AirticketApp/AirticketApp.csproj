@@ -289,6 +289,10 @@
     <Compile Include="Migrations\201607021134247_AddPayment.Designer.cs">
       <DependentUpon>201607021134247_AddPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607021228433_PopulateAircrafts.cs" />
+    <Compile Include="Migrations\201607021228433_PopulateAircrafts.Designer.cs">
+      <DependentUpon>201607021228433_PopulateAircrafts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aircraft.cs" />
@@ -444,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607021134247_AddPayment.resx">
       <DependentUpon>201607021134247_AddPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607021228433_PopulateAircrafts.resx">
+      <DependentUpon>201607021228433_PopulateAircrafts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
