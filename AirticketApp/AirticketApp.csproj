@@ -210,88 +210,28 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="EntityTypeConfigurations\AircraftConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\AirlineConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\AirlineUserConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\AirportConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\ArrivalConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\BoardingPassConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\BookingConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\CreditCardConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\DepartureConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\FlightConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\NotificationConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\PassengerConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\PaymentConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\PublicUserConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\SeatConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\TypeConfigurationExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201607011655264_InitialModel.cs" />
-    <Compile Include="Migrations\201607011655264_InitialModel.Designer.cs">
-      <DependentUpon>201607011655264_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607011656392_AddPublicUser.cs" />
-    <Compile Include="Migrations\201607011656392_AddPublicUser.Designer.cs">
-      <DependentUpon>201607011656392_AddPublicUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607011658506_AddNotification.cs" />
-    <Compile Include="Migrations\201607011658506_AddNotification.Designer.cs">
-      <DependentUpon>201607011658506_AddNotification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607011709019_AddAirport.cs" />
-    <Compile Include="Migrations\201607011709019_AddAirport.Designer.cs">
-      <DependentUpon>201607011709019_AddAirport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607011710046_PopulateAirports.cs" />
-    <Compile Include="Migrations\201607011710046_PopulateAirports.Designer.cs">
-      <DependentUpon>201607011710046_PopulateAirports.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020916042_AddAirline.cs" />
-    <Compile Include="Migrations\201607020916042_AddAirline.Designer.cs">
-      <DependentUpon>201607020916042_AddAirline.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020916377_PopulateAirlines.cs" />
-    <Compile Include="Migrations\201607020916377_PopulateAirlines.Designer.cs">
-      <DependentUpon>201607020916377_PopulateAirlines.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020918142_AddFlight.cs" />
-    <Compile Include="Migrations\201607020918142_AddFlight.Designer.cs">
-      <DependentUpon>201607020918142_AddFlight.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020919037_AddDeparture.cs" />
-    <Compile Include="Migrations\201607020919037_AddDeparture.Designer.cs">
-      <DependentUpon>201607020919037_AddDeparture.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020921375_AddArrival.cs" />
-    <Compile Include="Migrations\201607020921375_AddArrival.Designer.cs">
-      <DependentUpon>201607020921375_AddArrival.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020923561_AddSeat.cs" />
-    <Compile Include="Migrations\201607020923561_AddSeat.Designer.cs">
-      <DependentUpon>201607020923561_AddSeat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020926318_AddAircraft.cs" />
-    <Compile Include="Migrations\201607020926318_AddAircraft.Designer.cs">
-      <DependentUpon>201607020926318_AddAircraft.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020943256_AddAirlineUser.cs" />
-    <Compile Include="Migrations\201607020943256_AddAirlineUser.Designer.cs">
-      <DependentUpon>201607020943256_AddAirlineUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020946048_AddBooking.cs" />
-    <Compile Include="Migrations\201607020946048_AddBooking.Designer.cs">
-      <DependentUpon>201607020946048_AddBooking.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020955470_AddBoardingPass.cs" />
-    <Compile Include="Migrations\201607020955470_AddBoardingPass.Designer.cs">
-      <DependentUpon>201607020955470_AddBoardingPass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607021000087_AddPassenger.cs" />
-    <Compile Include="Migrations\201607021000087_AddPassenger.Designer.cs">
-      <DependentUpon>201607021000087_AddPassenger.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607021127480_AddCreditCard.cs" />
-    <Compile Include="Migrations\201607021127480_AddCreditCard.Designer.cs">
-      <DependentUpon>201607021127480_AddCreditCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607021131019_AddCreditCard1.cs" />
-    <Compile Include="Migrations\201607021131019_AddCreditCard1.Designer.cs">
-      <DependentUpon>201607021131019_AddCreditCard1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607021134247_AddPayment.cs" />
-    <Compile Include="Migrations\201607021134247_AddPayment.Designer.cs">
-      <DependentUpon>201607021134247_AddPayment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607021228433_PopulateAircrafts.cs" />
-    <Compile Include="Migrations\201607021228433_PopulateAircrafts.Designer.cs">
-      <DependentUpon>201607021228433_PopulateAircrafts.cs</DependentUpon>
+    <Compile Include="Migrations\201607021759565_InitialModel.cs" />
+    <Compile Include="Migrations\201607021759565_InitialModel.Designer.cs">
+      <DependentUpon>201607021759565_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -392,65 +332,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201607011655264_InitialModel.resx">
-      <DependentUpon>201607011655264_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607011656392_AddPublicUser.resx">
-      <DependentUpon>201607011656392_AddPublicUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607011658506_AddNotification.resx">
-      <DependentUpon>201607011658506_AddNotification.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607011709019_AddAirport.resx">
-      <DependentUpon>201607011709019_AddAirport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607011710046_PopulateAirports.resx">
-      <DependentUpon>201607011710046_PopulateAirports.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020916042_AddAirline.resx">
-      <DependentUpon>201607020916042_AddAirline.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020916377_PopulateAirlines.resx">
-      <DependentUpon>201607020916377_PopulateAirlines.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020918142_AddFlight.resx">
-      <DependentUpon>201607020918142_AddFlight.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020919037_AddDeparture.resx">
-      <DependentUpon>201607020919037_AddDeparture.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020921375_AddArrival.resx">
-      <DependentUpon>201607020921375_AddArrival.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020923561_AddSeat.resx">
-      <DependentUpon>201607020923561_AddSeat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020926318_AddAircraft.resx">
-      <DependentUpon>201607020926318_AddAircraft.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020943256_AddAirlineUser.resx">
-      <DependentUpon>201607020943256_AddAirlineUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020946048_AddBooking.resx">
-      <DependentUpon>201607020946048_AddBooking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020955470_AddBoardingPass.resx">
-      <DependentUpon>201607020955470_AddBoardingPass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607021000087_AddPassenger.resx">
-      <DependentUpon>201607021000087_AddPassenger.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607021127480_AddCreditCard.resx">
-      <DependentUpon>201607021127480_AddCreditCard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607021131019_AddCreditCard1.resx">
-      <DependentUpon>201607021131019_AddCreditCard1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607021134247_AddPayment.resx">
-      <DependentUpon>201607021134247_AddPayment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607021228433_PopulateAircrafts.resx">
-      <DependentUpon>201607021228433_PopulateAircrafts.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201607021759565_InitialModel.resx">
+      <DependentUpon>201607021759565_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using AirticketApp.EntityTypeConfigurations;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -20,21 +21,26 @@ namespace AirticketApp.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Airport> Airports { get; set; }
-        public DbSet<PublicUser> PublicUsers { get; set; }
-        public DbSet<Notification> Notifications { get; set; }        
-        public DbSet<Airline> Airlines { get; set; }
-        public DbSet<Flight> Flights { get; set; }
-        public DbSet<Departure> Departures { get; set; }
-        public DbSet<Arrival> Arrivals { get; set; }
-        public DbSet<Seat> Seats { get; set; }
-        public DbSet<Aircraft> Aircrafts { get; set; }
-        public DbSet<AirlineUser> AirlineUsers { get; set; }
-        public DbSet<Booking> Bookings { get; set; }
-        public DbSet<BoardingPass> BoardingPasses { get; set; }
-        public DbSet<Passenger> Passengers { get; set; }
-        public DbSet<CreditCard> CreditCards { get; set; }
-        // public DbSet<Payment> Payments { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new AirlineConfiguration());
+            modelBuilder.Configurations.Add(new AirportConfiguration());
+            modelBuilder.Configurations.Add(new AircraftConfiguration());
+            modelBuilder.Configurations.Add(new NotificationConfiguration());
+            modelBuilder.Configurations.Add(new AirlineUserConfiguration());
+            modelBuilder.Configurations.Add(new BookingConfiguration());
+            modelBuilder.Configurations.Add(new FlightConfiguration());
+            modelBuilder.Configurations.Add(new PublicUserConfiguration());
+            modelBuilder.Configurations.Add(new CreditCardConfiguration());
+            modelBuilder.Configurations.Add(new PaymentConfiguration());
+            modelBuilder.Configurations.Add(new DepartureConfiguration());
+            modelBuilder.Configurations.Add(new ArrivalConfiguration());
+            modelBuilder.Configurations.Add(new SeatConfiguration());
+            modelBuilder.Configurations.Add(new BoardingPassConfiguration());
+            modelBuilder.Configurations.Add(new PassengerConfiguration());
+            
+            base.OnModelCreating(modelBuilder);
+        }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

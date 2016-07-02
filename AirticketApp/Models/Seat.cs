@@ -9,15 +9,11 @@ namespace AirticketApp.Models
 {
     public class Seat
     {
-        [Key]
-        [Column(Order = 1)]
-        public long FlightNumber { get; set; }
-        [Key]
-        [Column(Order = 2)]
+        public int Id { get; set; }
+        public string Number { get; set; }
         public char Letter { get; set; }
-        [Key]
-        [Column(Order = 3)]
-        public DateTime Time { get; set; }
         public Flight Flight { get; set; }
+        public int FlightId { get; set; }
+        public string FlightNumber { get; set; }
     }
 }

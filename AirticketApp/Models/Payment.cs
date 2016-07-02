@@ -12,13 +12,15 @@ namespace AirticketApp.Models
         public long Id { get; set; }
         public Booking Booking { get; set; }
         public long BookingId { get; set; }
-
-        [Required]
-        [MaxLength(20)]
         public string Reference { get; set; }
-
-        [Required]
         public CustomEnums.PaymentStatus Status { get; set; }
+        public ICollection<CreditCard> CreditCards { get; private set; }
+
+        public Payment()
+        {
+            this.Status = default(CustomEnums.PaymentStatus);
+            this.CreditCards = new HashSet<CreditCard>();
+        }
 
     }
 }

@@ -10,7 +10,6 @@ namespace AirticketApp.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "AirticketApp.Models.ApplicationDbContext";
         }
 
         protected override void Seed(AirticketApp.Models.ApplicationDbContext context)

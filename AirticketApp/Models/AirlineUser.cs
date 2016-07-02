@@ -9,10 +9,15 @@ namespace AirticketApp.Models
     public class AirlineUser
     {
         public int Id { get; set; }
-        [Required]
-        [Key]
         public string UserName { get; set; }
-        [Required]
         public string Password { get; set; }
+        public ICollection<Flight> Flights { get; private set; }
+        public ICollection<Booking> Bookings { get; private set; }
+
+        public AirlineUser()
+        {
+            this.Flights = new HashSet<Flight>();
+            this.Bookings = new HashSet<Booking>();
+        }
     }
 }

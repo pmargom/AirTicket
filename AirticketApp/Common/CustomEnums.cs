@@ -7,6 +7,12 @@ namespace AirticketApp.Common
 {
     public static class CustomEnums
     {
+        public enum FLightStatus
+        {
+            Open,
+            Close
+        }
+
         public enum PaymentStatus
         {
             Pending,
@@ -17,7 +23,7 @@ namespace AirticketApp.Common
 
         public enum BoardingPassStatus
         {
-            Pending,
+            Open,
             Used
         }
 
@@ -35,5 +41,10 @@ namespace AirticketApp.Common
             AmericanExpress
         }
 
+        public enum PublicUserStatus
+        {
+            Active,
+            Locked
+        }
     }
 }

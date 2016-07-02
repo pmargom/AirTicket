@@ -16,5 +16,11 @@ namespace AirticketApp.Models
         public string ExpirationYear { get; set; }
         public PublicUser PublicUser { get; set; }
         public int PublicUserId { get; set; }
+        public ICollection<Payment> Payments { get; private set; }
+
+        public CreditCard()
+        {
+            this.Payments = new HashSet<Payment>();
+        }
     }
 }
