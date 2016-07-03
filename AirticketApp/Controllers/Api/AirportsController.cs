@@ -35,7 +35,7 @@ namespace AirticketApp.Controllers.Api
                 return NotFound();
             }
 
-            return Ok((Mapper.Map<Airport, AirportDto>(airport));
+            return Ok(Mapper.Map<Airport, AirportDto>(airport));
         }
 
         // POST /api/airports

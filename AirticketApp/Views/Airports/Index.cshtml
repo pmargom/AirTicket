@@ -1,0 +1,67 @@
+﻿@model IEnumerable<AirticketApp.Models.Airport>
+@{
+    ViewBag.Title = "Airports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Customers</h2>
+<p>
+    @Html.ActionLink("New Airpor", "New", "Airports", null, new { @class = "btn btn-primary" })
+</p>
+<table id="airports" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Airport</th>
+            <th>City</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#airports").DataTable({
+                ajax: {
+                    url: "/api/airports",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function(data, type, airport) {
+                            return "<a href='/airports/edit/" + airport.id + "'>" + airport.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "city"
+                    },
+                    {
+                        data: "id",
+                        render: function(data) {
+                            return "<button class='btn-link js-delete' data-airport-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+            });
+            $("#airports").on("click", ".js-delete", function () {
+                var button = $(this);
+                //bootbox.confirm("Are you sure you want to delete this airport?", function (result) {
+               if (confirm("Are you sure you want to delete this airport?")) {
+                   // if (result) {
+                        $.ajax({
+                            url: "/api/airports/" + button.attr("data-airport-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+                            }
+                        });
+                    //}
+                }
+                   //});
+            });
+        });
+    </script>
+}
+
+

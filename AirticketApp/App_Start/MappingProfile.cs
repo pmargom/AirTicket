@@ -10,6 +10,7 @@ namespace AirticketApp.App_Start
         {
             Mapper.CreateMap<Airport, AirportDto>();
             Mapper.CreateMap<AirportDto, Airport>();
+            Mapper.CreateMap<Airport, Airport>();
         }
     }
 }

@@ -1,0 +1,35 @@
+﻿@model AirticketApp.ViewModels.AirportFormViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Customer</h2>
+
+@using (Html.BeginForm("Save", "Airports"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+    <div class="form-group">
+        @Html.LabelFor(m => m.Airport.Name)
+        @Html.TextBoxFor(m => m.Airport.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Airport.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Airport.City)
+        @Html.TextBoxFor(m => m.Airport.City, new {@class = "form-control"})
+        @Html.ValidationMessageFor(m => m.Airport.City)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Airport.Country)
+        @Html.TextBoxFor(m => m.Airport.Country, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Airport.Country)
+    </div>
+    @Html.HiddenFor(m => m.Airport.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
