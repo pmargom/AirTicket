@@ -21,6 +21,9 @@ namespace AirticketApp.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Airport> Airports { get; set; }
+        public DbSet<Airline> Airlines { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new AirlineConfiguration());
