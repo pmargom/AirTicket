@@ -233,6 +233,26 @@
     <Compile Include="Migrations\201607021759565_InitialModel.Designer.cs">
       <DependentUpon>201607021759565_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607030830460_PopulateAirlines.cs" />
+    <Compile Include="Migrations\201607030830460_PopulateAirlines.Designer.cs">
+      <DependentUpon>201607030830460_PopulateAirlines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607030836180_PopulateAircrafts.cs" />
+    <Compile Include="Migrations\201607030836180_PopulateAircrafts.Designer.cs">
+      <DependentUpon>201607030836180_PopulateAircrafts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607030841016_PopulateAirports.cs" />
+    <Compile Include="Migrations\201607030841016_PopulateAirports.Designer.cs">
+      <DependentUpon>201607030841016_PopulateAirports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607030842528_PopulateAirlineUsers.cs" />
+    <Compile Include="Migrations\201607030842528_PopulateAirlineUsers.Designer.cs">
+      <DependentUpon>201607030842528_PopulateAirlineUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607030925571_InitialModel1.cs" />
+    <Compile Include="Migrations\201607030925571_InitialModel1.Designer.cs">
+      <DependentUpon>201607030925571_InitialModel1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aircraft.cs" />
@@ -334,6 +354,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201607021759565_InitialModel.resx">
       <DependentUpon>201607021759565_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607030830460_PopulateAirlines.resx">
+      <DependentUpon>201607030830460_PopulateAirlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607030836180_PopulateAircrafts.resx">
+      <DependentUpon>201607030836180_PopulateAircrafts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607030841016_PopulateAirports.resx">
+      <DependentUpon>201607030841016_PopulateAirports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607030842528_PopulateAirlineUsers.resx">
+      <DependentUpon>201607030842528_PopulateAirlineUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607030925571_InitialModel1.resx">
+      <DependentUpon>201607030925571_InitialModel1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
