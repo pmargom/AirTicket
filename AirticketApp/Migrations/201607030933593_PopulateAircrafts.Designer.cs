@@ -7,13 +7,13 @@ namespace AirticketApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class PopulateAirlineUsers : IMigrationMetadata
+    public sealed partial class PopulateAircrafts : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(PopulateAirlineUsers));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PopulateAircrafts));
         
         string IMigrationMetadata.Id
         {
-            get { return "201607030842528_PopulateAirlineUsers"; }
+            get { return "201607030933593_PopulateAircrafts"; }
         }
         
         string IMigrationMetadata.Source

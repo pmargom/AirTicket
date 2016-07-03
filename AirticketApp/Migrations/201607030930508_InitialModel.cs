@@ -266,36 +266,32 @@ namespace AirticketApp.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        DateOfDeparture = c.DateTime(nullable: false),
-                        TimeOfDeparture = c.DateTime(nullable: false),
+                        Date = c.DateTime(nullable: false),
+                        Time = c.DateTime(nullable: false),
                         AirPortId = c.Int(nullable: false),
-                        FlightNumber = c.String(nullable: false, maxLength: 8),
-                        Flight_Id = c.Int(),
+                        FlightId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Airports", t => t.AirPortId, cascadeDelete: true)
-                .ForeignKey("dbo.Flights", t => t.Flight_Id)
-                .Index(t => new { t.FlightNumber, t.DateOfDeparture, t.TimeOfDeparture }, unique: true, name: "IX_Flight_Number_Departure_Date_Time")
-                .Index(t => t.AirPortId)
-                .Index(t => t.Flight_Id);
+                .ForeignKey("dbo.Flights", t => t.FlightId, cascadeDelete: true)
+                .Index(t => new { t.FlightId, t.Date, t.Time }, unique: true, name: "IX_Flight_Id_Departure_Date_Time")
+                .Index(t => t.AirPortId);
             
             CreateTable(
                 "dbo.Arrivals",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        DateOfDeparture = c.DateTime(nullable: false),
-                        TimeOfDeparture = c.DateTime(nullable: false),
+                        Date = c.DateTime(nullable: false),
+                        Time = c.DateTime(nullable: false),
                         AirPortId = c.Int(nullable: false),
-                        FlightNumber = c.String(nullable: false, maxLength: 8),
-                        Flight_Id = c.Int(),
+                        FlightId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Airports", t => t.AirPortId, cascadeDelete: true)
-                .ForeignKey("dbo.Flights", t => t.Flight_Id)
-                .Index(t => new { t.FlightNumber, t.DateOfDeparture, t.TimeOfDeparture }, unique: true, name: "IX_Flight_Number_Arrival_Date_Time")
-                .Index(t => t.AirPortId)
-                .Index(t => t.Flight_Id);
+                .ForeignKey("dbo.Flights", t => t.FlightId, cascadeDelete: true)
+                .Index(t => new { t.FlightId, t.Date, t.Time }, unique: true, name: "IX_Flight_Id_Arrival_Date_Time")
+                .Index(t => t.AirPortId);
             
             CreateTable(
                 "dbo.BookinFlights",
@@ -327,9 +323,9 @@ namespace AirticketApp.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Arrivals", "Flight_Id", "dbo.Flights");
+            DropForeignKey("dbo.Arrivals", "FlightId", "dbo.Flights");
             DropForeignKey("dbo.Arrivals", "AirPortId", "dbo.Airports");
-            DropForeignKey("dbo.Departures", "Flight_Id", "dbo.Flights");
+            DropForeignKey("dbo.Departures", "FlightId", "dbo.Flights");
             DropForeignKey("dbo.Departures", "AirPortId", "dbo.Airports");
             DropForeignKey("dbo.Notifications", "PublicUserId", "dbo.PublicUsers");
             DropForeignKey("dbo.CreditCards", "PublicUserId", "dbo.PublicUsers");
@@ -354,12 +350,10 @@ namespace AirticketApp.Migrations
             DropIndex("dbo.CreditCardPayments", new[] { "CreditCardId" });
             DropIndex("dbo.BookinFlights", new[] { "FlightId" });
             DropIndex("dbo.BookinFlights", new[] { "BookingId" });
-            DropIndex("dbo.Arrivals", new[] { "Flight_Id" });
             DropIndex("dbo.Arrivals", new[] { "AirPortId" });
-            DropIndex("dbo.Arrivals", "IX_Flight_Number_Arrival_Date_Time");
-            DropIndex("dbo.Departures", new[] { "Flight_Id" });
+            DropIndex("dbo.Arrivals", "IX_Flight_Id_Arrival_Date_Time");
             DropIndex("dbo.Departures", new[] { "AirPortId" });
-            DropIndex("dbo.Departures", "IX_Flight_Number_Departure_Date_Time");
+            DropIndex("dbo.Departures", "IX_Flight_Id_Departure_Date_Time");
             DropIndex("dbo.Payments", "IX_Payment_Reference");
             DropIndex("dbo.Payments", new[] { "BookingId" });
             DropIndex("dbo.CreditCards", new[] { "PublicUserId" });

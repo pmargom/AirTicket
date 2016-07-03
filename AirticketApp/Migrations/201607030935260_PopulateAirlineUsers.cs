@@ -10,7 +10,7 @@ namespace AirticketApp.Migrations
             Sql("INSERT INTO AirlineUsers (UserName, Password) VALUES ('staff1', '123456')");
             Sql("INSERT INTO AirlineUsers (UserName, Password) VALUES ('staff2', '123456')");
             Sql("INSERT INTO AirlineUsers (UserName, Password) VALUES ('staff3', '123456')");
-            Sql("INSERT INTO AirlineUsers (UserName, Password) VALUES ('staff4', '123456')");  
+            Sql("INSERT INTO AirlineUsers (UserName, Password) VALUES ('staff4', '123456')");
         }
         
         public override void Down()
