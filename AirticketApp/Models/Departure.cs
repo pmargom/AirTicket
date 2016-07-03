@@ -10,11 +10,11 @@ namespace AirticketApp.Models
     public class Departure
     {
         public int Id { get; set; }
-        public DateTime DateOfDeparture { get; set; }
-        public DateTime TimeOfDeparture { get; set; }
+        public DateTime Date { get; set; }
+        public DateTime Time { get; set; }
         public Airport Airport { get; set; }
         public int AirPortId { get; set; }
         public Flight Flight { get; set; }
-        public string FlightNumber { get; set; }
+        public int FlightId { get; set; }
     }
 }

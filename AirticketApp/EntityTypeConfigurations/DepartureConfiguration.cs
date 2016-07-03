@@ -7,18 +7,17 @@ namespace AirticketApp.EntityTypeConfigurations
     {
         public DepartureConfiguration()
         {
-            Property(p => p.FlightNumber)
+            Property(p => p.FlightId)
                 .IsRequired()
-                .HasMaxLength(8)
-                .HasUniqueIndexAnnotation("IX_Flight_Number_Departure_Date_Time", 0);
+                .HasUniqueIndexAnnotation("IX_Flight_Id_Departure_Date_Time", 0);
 
-            Property(p => p.DateOfDeparture)
+            Property(p => p.Date)
                 .IsRequired()
-                .HasUniqueIndexAnnotation("IX_Flight_Number_Departure_Date_Time", 1);
+                .HasUniqueIndexAnnotation("IX_Flight_Id_Departure_Date_Time", 1);
 
-            Property(p => p.TimeOfDeparture)
+            Property(p => p.Time)
                 .IsRequired()
-                .HasUniqueIndexAnnotation("IX_Flight_Number_Departure_Date_Time", 2);
+                .HasUniqueIndexAnnotation("IX_Flight_Id_Departure_Date_Time", 2);
         }
     }
 }
