@@ -253,6 +253,10 @@
     <Compile Include="Migrations\201607030946024_PopulateFlights.Designer.cs">
       <DependentUpon>201607030946024_PopulateFlights.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607030950258_PopulateArrivals.cs" />
+    <Compile Include="Migrations\201607030950258_PopulateArrivals.Designer.cs">
+      <DependentUpon>201607030950258_PopulateArrivals.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aircraft.cs" />
@@ -369,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607030946024_PopulateFlights.resx">
       <DependentUpon>201607030946024_PopulateFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607030950258_PopulateArrivals.resx">
+      <DependentUpon>201607030950258_PopulateArrivals.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
