@@ -158,8 +158,8 @@ namespace AirticketApp.Controllers
                 {
                     //var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
                     //var roleManager = new RoleManager<IdentityRole>(roleStore);
-                    //await roleManager.CreateAsync(new IdentityRole("CanManageAirports"));
-                    //await UserManager.AddToRoleAsync(user.Id, "CanManageAirports");
+                    //await roleManager.CreateAsync(new IdentityRole(RoleName.CanManageAirports));
+                    //await UserManager.AddToRoleAsync(user.Id, RoleName.CanManageAirports);
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     

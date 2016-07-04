@@ -10,6 +10,7 @@ using AutoMapper;
 
 namespace AirticketApp.Controllers
 {
+    [AllowAnonymous]
     public class AirportsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -24,6 +25,7 @@ namespace AirticketApp.Controllers
             _context.Dispose();
         }
 
+        [Authorize(Roles = RoleName.CanManageAirports)]
         public ActionResult New()
         {
             var viewModel = new AirportFormViewModel()
@@ -62,9 +64,15 @@ namespace AirticketApp.Controllers
             return RedirectToAction("Index", "Airports");
         }
 
+        [Authorize(Roles = RoleName.CanManageAirports)]
         public ViewResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageAirports))
+            {
+                return View("List");
+            }
+
+            return View("ReadOnlyList");
         }
 
         public ActionResult Details(int id)
